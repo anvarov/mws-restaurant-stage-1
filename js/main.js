@@ -171,13 +171,16 @@ createRestaurantHTML = (restaurant) => {
   neighborhood.innerHTML = restaurant.neighborhood;
   li.append(neighborhood);
 
+  const addressWrapper = document.createElement('address');
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  li.append(address);
+  addressWrapper.appendChild(address)
+  li.append(addressWrapper);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute('role', 'button')
   li.append(more)
 
   return li
