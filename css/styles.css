@@ -229,13 +229,14 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 92%;
+  height: 100%;
   position: fixed;
   right: 0;
-  top: 8%;
+  top: 80px;
   width: 50%;
   grid-row: 1 / 4;
   grid-column: 1 / 2;
+  z-index: 1001;
 }
 .inside #map {
   background-color: #ccc;
